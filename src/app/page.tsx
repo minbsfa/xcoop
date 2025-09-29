@@ -5,9 +5,9 @@ export default function Home() {
   ];
   return (
     <div className="py-10 space-y-10">
-      <section className="rounded-2xl bg-blue-600 text-white p-10">
+      <section className="rounded-2xl bg-[color:var(--brand-600)] hover:bg-[color:var(--brand-700)] transition-colors text-white p-10">
         <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Your Cooperative, Modern and Clear</h1>
-        <p className="mt-3 max-w-2xl text-white/90">A clean, responsive interface across phones, tablets and desktops. Real-time updates and transparent records.</p>
+        <p className="mt-3 max-w-2xl/ text-white/90">A clean, responsive interface across phones, tablets and desktops. Real-time updates and transparent records.</p>
       </section>
       <section className="grid gap-6 md:grid-cols-3">
         <div className="card p-6">

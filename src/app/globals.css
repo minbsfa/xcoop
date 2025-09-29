@@ -6,9 +6,12 @@
   --muted: #475569;      /* slate-600 */
   --muted-2: #64748b;    /* slate-500 */
   --border: rgba(15, 23, 42, 0.08);
-  --brand: #2563eb;      /* blue-600 */
-  --brand-600: #2563eb;
-  --brand-700: #1d4ed8;
+  /* User palette */
+  --brand: #003049;   /* deep blue */
+  --accent-red: #D62828;
+  --accent-orange: #F77F00;
+  --accent-yellow: #FCBF49;
+  --accent-cream: #EAE2B7;
 }
 
 html { color-scheme: light; }

@@ -11,6 +11,8 @@
   --brand-700: #1d4ed8;
 }
 
+html { color-scheme: light; }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -20,8 +22,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1220;
-    --foreground: #ecf2ff;
+    /* lock to light palette for consistent readability */
+    --background: #ffffff;
+    --foreground: #0f172a;
   }
 }
 

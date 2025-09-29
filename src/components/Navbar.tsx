@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export default async function Navbar() {
-  const supabase = getSupabaseServerClient();
+  const supabase = await getSupabaseServerClient();
   const { data } = await supabase.auth.getSession();
   const isAuthed = !!data.session;
   return (
@@ -12,9 +12,9 @@ export default async function Navbar() {
         <nav className="hidden gap-6 md:flex">
           <Link href="/about" className="text-sm text-gray-600 hover:text-black">About</Link>
           <Link href="/contact" className="text-sm text-gray-600 hover:text-black">Contact</Link>
-          <Link href={isAuthed ? "/member/dashboard" : "/(auth)/signin"} className="text-sm text-gray-600 hover:text-black">{isAuthed ? "Dashboard" : "Sign in"}</Link>
+          <Link href={isAuthed ? "/member/dashboard" : "/signin"} className="text-sm text-gray-600 hover:text-black">{isAuthed ? "Dashboard" : "Sign in"}</Link>
         </nav>
-        <Link href={isAuthed ? "/profile" : "/(auth)/signin"} className="md:hidden text-sm">Profile</Link>
+        <Link href={isAuthed ? "/profile" : "/signin"} className="md:hidden text-sm">Profile</Link>
       </div>
     </header>
   );

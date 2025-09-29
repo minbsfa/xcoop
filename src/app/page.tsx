@@ -10,17 +10,17 @@ export default function Home() {
         <p className="mt-3 max-w-2xl text-white/90">A next-level, app-like experience across phones, tablets and desktops. Real-time updates, seamless payments, and transparent records.</p>
       </section>
       <section className="grid gap-6 md:grid-cols-3">
-        <div className="rounded-xl border p-6">
-          <h3 className="mb-2 text-lg font-medium">Annual Contribution</h3>
-          <p className="text-sm text-gray-600">Currently set to ₱840.00. Members can view payment status once signed in.</p>
+        <div className="card p-6">
+          <h3 className="mb-2 text-lg font-medium">Member-first</h3>
+          <p className="text-sm text-blue-200">Simple access to announcements and personal records after sign-in.</p>
         </div>
-        <div className="rounded-xl border p-6">
-          <h3 className="mb-2 text-lg font-medium">Organization Chat</h3>
-          <p className="text-sm text-gray-600">A shared conversation space for members and officers with profile photos.</p>
+        <div className="card p-6">
+          <h3 className="mb-2 text-lg font-medium">Community</h3>
+          <p className="text-sm text-blue-200">Stay updated with organization news and activities.</p>
         </div>
-        <div className="rounded-xl border p-6">
-          <h3 className="mb-2 text-lg font-medium">Reports & Certificates</h3>
-          <p className="text-sm text-gray-600">Admins can generate reports and membership certificates on demand.</p>
+        <div className="card p-6">
+          <h3 className="mb-2 text-lg font-medium">Privacy</h3>
+          <p className="text-sm text-blue-200">No browser storage; data securely served from our backend.</p>
         </div>
       </section>
       <section className="rounded-xl border p-6">

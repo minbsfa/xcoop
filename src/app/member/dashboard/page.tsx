@@ -12,10 +12,12 @@ export default async function MemberDashboard() {
   const mockAnnouncements = [
     { id: 1, title: "Loan program update", body: "New terms available for small loans.", created_at: "2025-10-06" },
   ];
-  const mockBirthdays = [
-    { name: "Jennie", date: "2025-10-10", avatar: "https://i.pravatar.cc/80?img=1" },
-    { name: "Dolly", date: "2025-10-15", avatar: "https://i.pravatar.cc/80?img=2" },
-  ];
+  const { data: birthdays } = await supabase
+    .from("members")
+    .select("first_name,last_name,birth_date")
+    .gte("birth_date", "2025-09-01")
+    .lte("birth_date", "2025-10-31")
+    .order("birth_date", { ascending: true });
   const mockMessages = [
     { author: "Ma'am Jenn", text: "Good night everyone!", side: "left", avatar: "https://i.pravatar.cc/40?img=3" },
     { author: profile?.full_name ?? "You", text: "Good night ma'am!", side: "right", avatar: "https://i.pravatar.cc/40?img=4" },
@@ -40,12 +42,14 @@ export default async function MemberDashboard() {
         <section className="rounded-xl border p-4">
           <h2 className="mb-2 font-medium">Birthdays</h2>
           <ul className="space-y-3">
-            {mockBirthdays.map(b => (
-              <li key={b.name} className="flex items-center gap-3">
-                <img src={b.avatar} alt="" className="h-8 w-8 rounded-full" />
+            {(birthdays ?? []).map(b => (
+              <li key={`${b.first_name}-${b.last_name}-${b.birth_date}`} className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-indigo-600 text-white grid place-items-center text-xs">
+                  {b.first_name[0]}
+                </div>
                 <div>
-                  <p className="text-sm font-medium">{b.name}</p>
-                  <p className="text-xs text-gray-500">{new Date(b.date).toLocaleDateString()}</p>
+                  <p className="text-sm font-medium">{b.first_name} {b.last_name}</p>
+                  <p className="text-xs text-gray-500">{new Date(b.birth_date as unknown as string).toLocaleDateString()}</p>
                 </div>
               </li>
             ))}

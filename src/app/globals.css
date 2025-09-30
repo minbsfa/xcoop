@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+:root, :root[data-theme="one"] {
   --background: #ffffff; /* clean light */
   --foreground: #0f172a; /* slate-900 */
   --muted: #475569;      /* slate-600 */
@@ -12,6 +12,20 @@
   --accent-orange: #F77F00;
   --accent-yellow: #FCBF49;
   --accent-cream: #EAE2B7;
+}
+
+/* Theme Two: airy teal/emerald variant */
+:root[data-theme="two"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --muted-2: #5b728f;
+  --border: rgba(2, 6, 23, 0.08);
+  --brand: #0ea5e9;        /* sky-500 */
+  --accent-red: #10b981;   /* emerald-500 used for positive accents */
+  --accent-orange: #22c55e;/* green-500 for secondary */
+  --accent-yellow: #fde68a;/* amber-300 for highlights */
+  --accent-cream: #f0f9ff; /* sky-50 background tint */
 }
 
 html { color-scheme: light; }

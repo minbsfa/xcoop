@@ -45,12 +45,12 @@ export default async function ContactPage() {
             <option>Administrator</option>
           </select>
           <textarea name="message" placeholder="Your message" className="w-full rounded-md border px-3 py-2 min-h-32" required />
-          <button type="submit" className="rounded-md px-4 py-2 text-white" style={{backgroundColor: "var(--brand)"}}>Send</button>
+          <button type="submit" className="rounded-md px-4 py-2 text-white hover:opacity-90" style={{backgroundColor: "var(--brand)"}}>Send</button>
         </form>
       </div>
       <div className="space-y-3">
-        <div className="overflow-hidden rounded-xl border" style={{borderColor: "var(--border)"}}>
-          <Image src="/address.JPG" alt="Office address" width={1200} height={900} className="w-full h-64 object-cover" />
+        <div className="overflow-hidden rounded-xl border group" style={{borderColor: "var(--border)"}}>
+          <Image src="/address.JPG" alt="Office address" width={1200} height={900} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
         </div>
         <div className="card p-4">
           <h2 className="font-medium">SCNGMAI Office</h2>

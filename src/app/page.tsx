@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="py-10 space-y-10">
       <section className="rounded-2xl bg-[color:var(--brand)] text-white p-10">
-        <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Your Cooperative, Modern and Clear</h1>
+        <h1 className="text-3xl md:text-5xl font-semibold leading-tight">Surigao City & Norte Golden Mentors Association - SCNGMAI</h1>
         <p className="mt-3 max-w-2xl text-white/90">A clean, responsive interface across phones, tablets and desktops. Real-time updates and transparent records.</p>
       </section>
       <section className="space-y-4">

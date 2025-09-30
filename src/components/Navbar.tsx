@@ -11,6 +11,7 @@ export default async function Navbar() {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
         <Link href="/" className="font-semibold text-[color:var(--brand)]">xcoop</Link>
         <nav className="hidden gap-6 md:flex items-center">
+          <Link href="/" className="text-sm text-slate-700 hover:text-[color:var(--brand)]">Home</Link>
           <Link href="/about" className="text-sm text-slate-700 hover:text-[color:var(--brand)]">About</Link>
           <Link href="/contact" className="text-sm text-slate-700 hover:text-[color:var(--brand)]">Contact</Link>
           <Link href={isAuthed ? "/member/dashboard" : "/signin"} className="text-sm text-slate-700 hover:text-[color:var(--brand)]">{isAuthed ? "Dashboard" : "Sign in"}</Link>

@@ -18,6 +18,7 @@ export default function InteractiveCard({
       <Dialog.Trigger asChild>
         <button
           onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
           className="group relative w-full text-left overflow-hidden rounded-2xl border p-4 transition-transform duration-300 hover:scale-105 focus:scale-105 focus:outline-none"
           style={{ borderColor: "var(--border)" }}
         >
@@ -26,8 +27,16 @@ export default function InteractiveCard({
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-black/30" onMouseEnter={() => setOpen(true)} />
-        <Dialog.Content className="fixed left-1/2 top-1/2 w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white p-6 shadow-xl focus:outline-none">
+        <Dialog.Overlay
+          className="fixed inset-0 bg-black/30"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        />
+        <Dialog.Content
+          className="fixed left-1/2 top-1/2 w-[90vw] max-w-xl -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white p-6 shadow-xl focus:outline-none"
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
           <Dialog.Title className="mb-2 text-xl font-semibold" style={{ color: "var(--brand)" }}>
             {title}
           </Dialog.Title>

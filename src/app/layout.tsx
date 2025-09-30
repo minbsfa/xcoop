@@ -24,9 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="three">
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* @ts-expect-error Async Server Component */}
         <Navbar />
         <main className="mx-auto max-w-6xl px-4">{children}</main>
       </body>

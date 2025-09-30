@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
-import ThemeToggle from "./ThemeToggle";
 
 export default async function Navbar() {
   const supabase = await getSupabaseServerClient();
@@ -15,7 +14,6 @@ export default async function Navbar() {
           <Link href="/about" className="text-sm text-slate-700 hover:text-[color:var(--brand)]">About</Link>
           <Link href="/contact" className="text-sm text-slate-700 hover:text-[color:var(--brand)]">Contact</Link>
           <Link href={isAuthed ? "/member/dashboard" : "/signin"} className="text-sm text-slate-700 hover:text-[color:var(--brand)]">{isAuthed ? "Dashboard" : "Sign in"}</Link>
-          <ThemeToggle />
         </nav>
         <Link href={isAuthed ? "/profile" : "/signin"} className="md:hidden text-sm text-slate-700">Profile</Link>
       </div>

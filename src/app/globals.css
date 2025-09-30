@@ -28,6 +28,48 @@
   --accent-cream: #f0f9ff; /* sky-50 background tint */
 }
 
+/* Theme Three: purple/lavender calm */
+:root[data-theme="three"] {
+  --background: #ffffff;
+  --foreground: #111827; /* gray-900 */
+  --muted: #6b7280;      /* gray-500 */
+  --muted-2: #4b5563;    /* gray-600 */
+  --border: rgba(17, 24, 39, 0.08);
+  --brand: #7c3aed;      /* violet-600 */
+  --accent-red: #a78bfa; /* violet-300 highlights */
+  --accent-orange: #c4b5fd; /* violet-300 alt */
+  --accent-yellow: #e9d5ff; /* purple-100 */
+  --accent-cream: #faf5ff;  /* fuchsia-50 */
+}
+
+/* Theme Four: coral/salmon friendly */
+:root[data-theme="four"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --muted-2: #5b728f;
+  --border: rgba(2, 6, 23, 0.08);
+  --brand: #fb7185;      /* rose-400 */
+  --accent-red: #f43f5e; /* rose-500 */
+  --accent-orange: #f59e0b; /* amber-500 */
+  --accent-yellow: #fed7aa; /* orange-200 */
+  --accent-cream: #fff7ed;  /* orange-50 */
+}
+
+/* Theme Five: green/forest trustworthy */
+:root[data-theme="five"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --muted-2: #5b728f;
+  --border: rgba(2, 6, 23, 0.08);
+  --brand: #16a34a;      /* green-600 */
+  --accent-red: #22c55e; /* green-500 */
+  --accent-orange: #84cc16; /* lime-500 */
+  --accent-yellow: #d9f99d; /* lime-200 */
+  --accent-cream: #f7fee7;  /* lime-50 */
+}
+
 html { color-scheme: light; }
 
 @theme inline {
